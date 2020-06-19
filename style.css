@@ -1,0 +1,175 @@
+.wrapper{
+    margin: 0 auto;
+    width: 90wh;
+    text-align: center;
+    transition: 0.1s all;
+}
+.title{
+    transition: 0.5s all;
+    box-sizing: border-box;
+
+}
+.title:hover{
+    box-sizing: border-box;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.results_block{
+    height: 80vh;
+    background: #f7f7f7;
+    border-radius: 20px;
+    width: 70vw;
+    margin: 0 auto;
+}
+    .results__legend{
+        border:solid #afafaf 3px;
+        border-radius: 13px;
+        height: 5vh;
+        margin-bottom: 10px;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 30px minmax(50px,1fr) 50px 0.5fr 0.5fr;
+    }
+        .results__legend__item{
+            border-left: #ffdab4 solid 1px;
+            margin-top: 7px;
+        }
+        .results__legend__position{
+            border-left: none ;
+}
+.result__lines{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(10,50px) ;
+    grid-auto-rows: 0px;
+    overflow: hidden
+}
+.result__lines__line{
+    width: 100%;
+    height: 100%;
+
+    transition: all 1s;
+
+    display: grid;
+    grid-template-columns: 30px minmax(50px,1fr) 50px 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+
+    border:solid #afafaf 3px;
+    border-radius: 10px;
+    background: #fff3ef;
+
+    overflow: hidden;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.result__lines__line:hover{
+    transform: scale(1,1.05);
+    background: #ffe9e0;
+    transition: 0.5s all;
+}
+.results__lines__line__item{
+    width: 100%;
+    border-left: #d08989 2px solid;
+    border-right:#d08989 2px solid ;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+
+
+.paginator{
+    display: inline-grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    font-family: monospace;
+    font-size: 1.5em;
+}
+.paginator__page{
+
+}
+
+
+.full_info_page{
+    display: none;
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+    z-index: 10;
+    background: #59A561;
+
+    font-size: 1em;
+    position: relative;
+    grid-template-columns: repeat(2,1fr) 50px;
+    grid-template-rows:  repeat(6,1fr);
+    grid-template-areas:
+                        "main              .       close"
+                        "latestCommit   contribs    .  "
+                        "ownerName      contribs    .  "
+                        "photo           discr      .  "
+                        "langs           discr      .  "
+                        "langs           discr      .  ";
+
+
+    justify-items: center;
+    align-items: center;
+
+}
+.full_info_page__repository_main_info{
+    grid-area: main;
+}
+.full_info_page__main_info__rep_name:before{
+    content: "name of rep: ";
+    position: relative;
+    color: #d4d4d4;
+    transform: translate(0%,-100%);
+}
+.full_info_page__main_info__stars{
+    grid-area: starsNum;
+
+}
+.full_info_page__main_info__stars:before{
+    content: "★";
+    position: relative;
+    color: gold;
+
+}
+.full_info_page__latest_commit{
+    grid-area: latestCommit;
+}
+.full_info_page__owner__photo{
+    grid-area: photo;
+    width: 130px;
+}
+.full_info_page__owner__name{
+    grid-area: ownerName;
+}
+.full_info_page__owner__name:before{
+    content: "created by:";
+    color: #d4d4d4;
+    position: absolute;
+    top: 150px;
+}
+
+.full_info_page__item{  /* all elements of full page info exept close btn*/
+    background: #a67c59;
+}
+.full_info_page__languages{
+    grid-area: langs;
+}
+.full_info_page__discription{
+    grid-area: discr;
+}
+.full_info_page__contributors{
+    grid-area: contribs;
+}
+.full_info_page__close_button{
+    grid-area: close;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #c42222;
+    font-size: 1.5em;
+    border: #c42222 3px solid;
+    padding-left: 7px;
+    padding-right: 7px;
+}
