@@ -86,7 +86,18 @@
     font-size: 1.5em;
 }
 .paginator__page{
-
+    padding-right: 5px;
+    border: 1px solid red;
+    margin-right: 4px;
+    text-align: center;
+}
+.paginator__page_selected{
+    background: rgba(253, 0, 1, 0.15);
+}
+.paginator__points{
+    padding-right: 5px;
+    margin-right: 4px;
+    text-align: center;
 }
 
 
@@ -146,8 +157,7 @@
 .full_info_page__owner__name:before{
     content: "created by:";
     color: #d4d4d4;
-    position: absolute;
-    top: 150px;
+
 }
 
 .full_info_page__item{  /* all elements of full page info exept close btn*/
@@ -161,6 +171,9 @@
 }
 .full_info_page__contributors{
     grid-area: contribs;
+}
+.full_info_page__contributors p{
+    color: #d4d4d4;
 }
 .full_info_page__close_button{
     grid-area: close;

@@ -2,26 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GitHub Dashboard</title>
+    <title>GitHub Dashboard Reps</title>
     <link rel="stylesheet" href="style.css">
+    <meta lang="ru">
 </head>
 <body>
     <div class="wrapper">
-        <h1 class="title">GitHub Dashboard</h1>
+        <h1 class="title">GitHub Dashboard Reps</h1>
         <form action="/action_page.php">
             <label for="search_title">Put smth</label>
-            <input type="text" id="search_title" value="">
+            <input type="text" id="search_title" value="1">
             <button type="button" id="search_button" >search reps</button>
             <label for="search_num">Page</label>
             <input type="number" value="1" id="search_num" min="1">
         </form>
-        <div class="paginator">
-            <div class="paginator__page">1</div>
-            <div class="paginator__page">1</div>
-            <div class="paginator__page">1</div>
-            <div class="paginator__page">1</div>
-            <div class="paginator__page">1</div>
-        </div>
+        <div class="paginator" value="1"></div>
         <div class="results_block">
             <div class="results__legend">
                 <div class="results__legend__position results__legend__item">№</div>
